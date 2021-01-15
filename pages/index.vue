@@ -552,7 +552,7 @@
           <v-col cols="12" sm="10" md="9">
             <v-card elevation="0">
               <v-card-text class="py-12">
-                <v-form ref="form" class="formrun" :action="`https://form.run/api/v1/r/${process.env.FORMRUN_ID}`" method="post" @submit="validate">
+                <v-form ref="form" class="formrun" action="https://form.run/api/v1/r/n1qq82h6l6j54mp4cnsg7mq7" method="post" @submit="validate">
                   <TextField
                     class="mb-8"
                     label="お名前"
