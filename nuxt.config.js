@@ -1,5 +1,8 @@
 import colors from 'vuetify/es5/util/colors'
 
+require('dotenv').config()
+const { GOOGLE_API_KEY, FORMRUN_ID } = process.env
+
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
@@ -52,7 +55,8 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/dotenv'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -103,5 +107,9 @@ export default {
     google: {
       families: ['Caveat:400,700'] // Loads Lato font with weights 400 and 700
     }
+  },
+  env: {
+    GOOGLE_API_KEY,
+    FORMRUN_ID
   }
 }
