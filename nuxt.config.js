@@ -30,8 +30,8 @@ export default {
       { hid: 'og:site_name', property: 'og:site_name', content: 'さかじり音楽教室' },
       { hid: 'og:title', property: 'og:title', content: '千葉県柏市のピアノ・エレクトーン教室' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:url', property: 'og:url', content: 'https://akabow.com' },
-      { hid: 'og:image', property: 'og:image', content: 'https://akabow.com/ogp.png' }
+      { hid: 'og:url', property: 'og:url', content: 'https://cranky-torvalds-9fe3dd.netlify.app' },
+      { hid: 'og:image', property: 'og:image', content: 'https://cranky-torvalds-9fe3dd.netlify.app/ogp.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/svg+xml', href: '/icon.svg' }
