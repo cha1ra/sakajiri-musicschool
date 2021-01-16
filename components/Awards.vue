@@ -1,9 +1,9 @@
 <template>
   <div>
     <div v-for="award in awards" :key="award.year">
-      <div class="font-weight-bold caption secondary--text">
-        {{ award.year }}年
-      </div>
+      <!--      <div class="font-weight-bold caption secondary&#45;&#45;text">-->
+      <!--        {{ award.year }}年-->
+      <!--      </div>-->
       <div class="ml-2">
         <div
           v-for="(content, index) in award.contents"

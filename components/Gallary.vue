@@ -51,7 +51,7 @@
       <v-img
         :src="url"
         aspect-ratio="1"
-        class="grey lighten-2"
+        class="grey lighten-2 gallary-img"
         @click="openModal(index)"
       >
         <template v-slot:placeholder>
@@ -136,5 +136,9 @@ export default {
   .right-btn:hover{
     transition: .3s;
     background-color: #aaa;
+  }
+
+  .gallary-img:hover{
+    cursor: pointer;
   }
 </style>

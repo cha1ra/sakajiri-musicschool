@@ -58,7 +58,8 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -113,5 +114,10 @@ export default {
   env: {
     GOOGLE_API_KEY,
     FORMRUN_ID
+  },
+
+  googleAnalytics: {
+    id: 'G-DL2TEWRJYX'
   }
+
 }

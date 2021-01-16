@@ -1,6 +1,6 @@
 <template>
   <v-container style="background-color: #f2f2f2;" fluid class="pa-0">
-    <div :style="{height: height-64 + 'px'}" class="header-img mb-16">
+    <div :style="{height: $vuetify.breakpoint.xs? '300px' :height-64 + 'px'}" class="header-img mb-16">
       <div class="header-img-content d-flex justify-center align-center">
         <div class="text-center">
           <p class="text-center font-weight-bold text-md-h6">
@@ -27,24 +27,27 @@
             />
           </div>
 
-          <div class="text-center">
+          <div class="d-flex justify-center align-center">
             <v-btn
               v-scroll-to="'#contact'"
-              class="font-weight-bold"
+              class="font-weight-bold mr-4"
               color="secondary"
               rounded
-              x-large
+              :x-large="!$vuetify.breakpoint.xs"
               href="#"
             >
               無料体験レッスン受付中♪
             </v-btn>
+          </div>
+          <div class="mt-4">
+            <AppScrollDown />
           </div>
         </div>
       </div>
     </div>
     <!-- 挨拶 -->
     <v-container fluid>
-      <section id="greeting" class="section">
+      <section id="greeting" class="section" style="opacity: 0.1 !important;">
         <SectionTitle
           class="mb-4 mb-sm-8 mb-md-12"
           title="Greeting"
@@ -304,7 +307,7 @@
 
         <SectionTitle
           class="mb-4 mb-sm-8 mb-md-12"
-          title="Gallary"
+          title="Gallery"
           subtitle="イベントの様子をちょい見せします！"
         />
         <v-container>
@@ -518,7 +521,7 @@
                   <tr>
                     <td>e-mail</td>
                     <td>
-                      sakajirimusic@gmail.com
+                      contact@sakajirimusic.com
                     </td>
                   </tr>
                   <tr>
@@ -554,12 +557,29 @@
         <div class="text-center">
           <img src="/family.png" style="width: 100%; max-width: 600px">
         </div>
-        <v-row justify="center">
+        <v-row justify="center" class="mb-8">
           <v-col cols="12" sm="10" md="8">
             <p class="text-caption text-sm-body-1 mb-0">
               ピアノ・エレクトーンを始めようと考えているなら、まずは無料体験レッスンで教室の雰囲気を感じてください！<br>
               レッスンの方法や指導方針など、みなさまの疑問や不安に、きめこまかくお応えします。
             </p>
+          </v-col>
+        </v-row>
+        <v-row class="mb-8">
+          <v-col>
+            <p class="text-center font-weight-bold mb-3">
+              ＼LINE からもお問い合わせできます／
+            </p>
+            <div class="d-flex justify-center align-center">
+              <img src="https://qr-official.line.me/sid/M/519zskvn.png" class="mr-4" width="120">
+              <div>
+                <p class="text-caption text-sm-body-1 mb-2" style="max-width: 400px">
+                  さかじり音楽教室公式アカウントから<br>
+                  チャットでお問い合わせできます
+                </p>
+                <a href="https://lin.ee/L6hRe5q"><img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="36" border="0"></a>
+              </div>
+            </div>
           </v-col>
         </v-row>
         <v-row justify="center">
@@ -667,6 +687,7 @@ import TextField from '../components/TextField'
 import Gallary from '../components/Gallary'
 import Awards from '../components/Awards'
 import Carricurum from '../components/Carricurum'
+import AppScrollDown from '../components/AppScrollDown'
 
 export default {
   components: {
@@ -677,7 +698,8 @@ export default {
     TextField,
     Gallary,
     Awards,
-    Carricurum
+    Carricurum,
+    AppScrollDown
   },
   data () {
     return {
@@ -697,12 +719,12 @@ export default {
         'event-4.jpg',
         'event-5.jpg',
         'event-6.jpg',
-        'event-1.jpg',
-        'event-2.jpg',
-        'event-3.jpg',
-        'event-4.jpg',
-        'event-5.jpg',
-        'event-6.jpg'
+        'event-7.jpg',
+        'event-8.jpg',
+        'event-9.jpg',
+        'event-10.jpg',
+        'event-11.jpg',
+        'event-12.jpg'
       ],
       timelines: [
         {

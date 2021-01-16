@@ -118,7 +118,7 @@
         <v-icon left>
           mdi-chevron-up
         </v-icon>
-        直近5年のみ表示する
+        直近3年のみ表示する
       </v-btn>
     </v-timeline-item>
   </v-timeline>

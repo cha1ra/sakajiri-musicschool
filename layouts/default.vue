@@ -8,7 +8,7 @@
       color="#F2F2F2"
     >
       <a href="#">
-        <v-img src="/logo.svg" max-width="150" />
+        <img src="/logo.svg" width="150">
       </a>
       <v-spacer />
       <a
