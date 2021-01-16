@@ -59,7 +59,8 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
     '@nuxtjs/dotenv',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/moment'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -118,6 +119,10 @@ export default {
 
   googleAnalytics: {
     id: 'G-DL2TEWRJYX'
+  },
+
+  moment: {
+    locales: ['ja']
   }
 
 }

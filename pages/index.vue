@@ -45,6 +45,38 @@
         </div>
       </div>
     </div>
+
+    <!-- Facebook News Feed -->
+    <v-container class="">
+      <div class="d-block d-sm-flex justify-center align-center">
+        <div class="mr-4 d-none d-sm-block">
+          <v-btn icon href="https://www.facebook.com/sakajirimusic" target="_blank">
+            <v-icon color="#1B76F2" size="49">
+              mdi-facebook
+            </v-icon>
+          </v-btn>
+        </div>
+        <div>
+          <div v-for="n in news" :key="n.id" class="d-flex align-sm-center mb-1">
+            <div
+              class="mr-1 mr-sm-4 caption font-weight-bold"
+              :style="{'min-width': $vuetify.breakpoint.xs && '74px'}"
+            >
+              {{ $vuetify.breakpoint.xs? $moment(n.created_time).format('YYYY/MM/DD') : $moment(n.created_time).format('YYYY年MM月DD日') }}
+            </div>
+            <a
+              :href="`https://www.facebook.com/sakajirimusic/posts/${n.id.split('_')[1]}`"
+              target="_blank"
+              style="text-decoration: none; color: #323232"
+              class="text-caption text-sm-body-1"
+            >
+              {{ n.message.split('\n')[0] }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </v-container>
+
     <!-- 挨拶 -->
     <v-container fluid>
       <section id="greeting" class="section" style="opacity: 0.1 !important;">
@@ -701,9 +733,18 @@ export default {
     Carricurum,
     AppScrollDown
   },
+  async asyncData ({ $axios }) {
+    const res = await $axios.$get('https://graph.facebook.com/sakajirimusic/posts?access_token=EAAFy65OsuigBACTkPIAAIXMgOxVpUZCmPrfvIPkIZAaF4uUzZCCZBCcQIPhL5IIsOaZB4vkoZA7qMVwjrDCKmqeYf97QSWxSKygqiLXLocOtz4Vqp4Vvq9uZAtZCBTQZAiXWZBHgHhC4aeWBMxrQhF1ZCjKoCRdaN2YfmZBr0ed0YwI3UAZDZD&locale=ja_JP&fields=id,message,created_time')
+    const messageData = res.data.filter((d) => {
+      return d.message
+    })
+    const news = messageData.length > 3 ? messageData.slice(0, 3) : messageData
+    return { news }
+  },
   data () {
     return {
       height: 0,
+      news: [],
       profiles: [
         '上野学園大学附属中学校、高等学校音楽科を経て、同大学音楽学部器楽学科ピアノ科卒業',
         '読売新聞社主催“読売新人演奏会”や、首席として各種演奏会に出演',
