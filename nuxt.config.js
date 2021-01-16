@@ -28,7 +28,7 @@ export default {
         content: '千葉県柏市にあるピアノ教室・エレクトーン教室です。個人指導レッスン40分。指導歴35年以上の講師が一人ひとりにあわせたレッスンを提供します。'
       },
       { hid: 'og:site_name', property: 'og:site_name', content: 'さかじり音楽教室' },
-      { hid: 'og:title', property: 'og:title', content: '千葉県柏市のピアノ・エレクトーン教室' },
+      { hid: 'og:title', property: 'og:title', content: 'さかじり音楽教室 | 千葉県柏市のピアノ・エレクトーン教室' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://cranky-torvalds-9fe3dd.netlify.app' },
       { hid: 'og:image', property: 'og:image', content: 'https://cranky-torvalds-9fe3dd.netlify.app/ogp.png' }
@@ -44,7 +44,9 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    { src: '~/plugins/vue2-google-maps.js' }
+    { src: '~/plugins/vue2-google-maps.js' },
+    { src: '~/plugins/vue-scrollmagic.js' },
+    { src: '~/plugins/vue-scrollto.js' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

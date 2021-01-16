@@ -2,7 +2,7 @@
   <v-container style="background-color: #f2f2f2;" fluid class="pa-0">
     <div :style="{height: height-64 + 'px'}" class="header-img mb-16">
       <div class="header-img-content d-flex justify-center align-center">
-        <div>
+        <div class="text-center">
           <p class="text-center font-weight-bold text-md-h6">
             <span class="d-inline-block">
               千葉県柏市 の
@@ -12,12 +12,11 @@
             </span>
           </p>
 
-          <v-img
+          <img
             v-if="$vuetify.breakpoint.xs"
-            class="mx-auto"
             width="200"
             src="logo.svg"
-          />
+          >
           <div
             v-else
             style="width: 600px;"
@@ -29,7 +28,14 @@
           </div>
 
           <div class="text-center">
-            <v-btn class="font-weight-bold" color="secondary" rounded x-large href="#contact">
+            <v-btn
+              v-scroll-to="'#contact'"
+              class="font-weight-bold"
+              color="secondary"
+              rounded
+              x-large
+              href="#"
+            >
               無料体験レッスン受付中♪
             </v-btn>
           </div>
@@ -533,13 +539,15 @@
 
     <!-- お問い合わせ -->
     <v-container>
-      <section id="contact" class="section">
+      <section id="contact" class="section" style="opacity: 1 !important;">
         <SectionTitle
           class="mb-4 mb-sm-8 mb-md-12"
           title="Contact"
           subtitle="お問い合わせ・無料体験レッスンのお申し込み"
         />
-        <v-img src="/family.png" max-width="600" class="mx-auto" />
+        <div class="text-center">
+          <img src="/family.png" style="width: 100%; max-width: 600px">
+        </div>
         <v-row justify="center">
           <v-col cols="12" sm="10" md="8">
             <p class="text-caption text-sm-body-1 mb-0">
@@ -1902,6 +1910,37 @@ export default {
   mounted () {
     window.addEventListener('resize', this.handleResize)
     this.handleResize()
+
+    const sectionIds = [
+      '#greeting',
+      '#about',
+      '#event',
+      '#curriculum',
+      '#profile',
+      '#history',
+      '#access'
+    ]
+    for (const sectionId of sectionIds) {
+      const scene1 = this.$scrollmagic
+        .scene({
+          triggerElement: sectionId, // トリガーにする要素ID
+          triggerHook: 0.5, // トリガーの位置
+          offset: 0, // 開始するスクロールの位置
+          duration: 300, // 終了するスクロールの位置
+          reverse: false // 反対方向からのスクロールを制御
+        })
+        // ↓実行されるアニメーションと、対象の要素IDを指定
+        .setTween(sectionId, {
+          css: {
+            opacity: '1' // 透明だったクラスを不透明にして表示
+          }
+        })
+        // ↓triggerのヘルプ表示
+        // .addIndicators({ name: 'OK' })
+
+      // controllerに追加
+      this.$scrollmagic.addScene(scene1)
+    }
   },
   destroyed () {
     window.removeEventListener('resize', this.handleResize)
@@ -1947,6 +1986,7 @@ export default {
   }
 
   .section {
+    opacity: 0;
     margin-bottom: 80px;
   }
 

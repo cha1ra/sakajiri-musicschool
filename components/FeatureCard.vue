@@ -18,7 +18,7 @@
     <div v-else-if="$vuetify.breakpoint.sm" class="">
       <div class="d-flex justify-center align-center pa-3">
         <div style="width: 150px;" class="mr-2">
-          <v-img :src="imgUrl" style="width: 100%;" />
+          <img :src="imgUrl" style="width: 100%;">
         </div>
         <div>
           <h3 class="px-4 font-weight-bold">

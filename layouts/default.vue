@@ -7,12 +7,15 @@
       elevation="0"
       color="#F2F2F2"
     >
-      <v-img src="/logo.svg" max-width="150" />
+      <a href="#">
+        <v-img src="/logo.svg" max-width="150" />
+      </a>
       <v-spacer />
       <a
         v-for="section in sections"
         :key="section.href"
-        :href="section.href"
+        v-scroll-to="section.href"
+        href="#"
         :class="{'d-md-inline': section.isSmHidden, 'd-sm-inline': !section.isSmHidden}"
         class="d-none app-bar-menu ml-6"
       >
@@ -41,7 +44,12 @@
       fixed
     >
       <v-list>
-        <v-list-item v-for="section in sections" :key="section.href" :href="section.href">
+        <v-list-item
+          v-for="section in sections"
+          :key="section.href"
+          v-scroll-to="section.href"
+          href="#"
+        >
           <span class="font-weight-bold mr-2">
             {{ section.ja }}
           </span>

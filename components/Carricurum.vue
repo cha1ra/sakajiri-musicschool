@@ -41,12 +41,12 @@
       class="mb-12"
     >
       <div class="d-flex justify-space-between align-center">
-        <v-img
+        <img
           :src="`/carricurum/${item.imgPrefix}-w.svg`"
           :max-height="120+index*10"
           style="width: 100px;"
           contain
-        />
+        >
         <div class="px-1 px-sm-4 px-md-12">
           <p class="text-h6 font-weight-bold text-center mb-0 mb-sm-4">
             {{ item.target }}
