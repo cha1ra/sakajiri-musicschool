@@ -43,16 +43,19 @@
       </div>
     </div>
     <!-- 挨拶 -->
-    <v-container>
+    <v-container fluid>
       <section id="greeting" class="section">
         <SectionTitle
           class="mb-4 mb-sm-8 mb-md-12"
           title="Greeting"
           subtitle="講師からのご挨拶"
         />
-        <v-row justify="center">
-          <v-col cols="12" sm="10" md="8">
-            <div class="section-content text-center body-2 text-sm-body-1">
+        <v-row justify="center" align="center">
+          <v-col cols="0" sm="2" md="1" class="d-none d-sm-block">
+            <img src="/greeting-left.png" alt="" style="width: 100%; max-width: 70px">
+          </v-col>
+          <v-col cols="12" sm="8" md="8">
+            <div class="greeting-div-content text-center body-2 text-sm-body-1">
               <h3 class="mb-8 title font-weight-bold">
                 一人ひとりの個性、伸ばします
               </h3>
@@ -115,9 +118,12 @@
                 </span>
               </p>
               <p class="my-8">
-                ピアノ・エレクトーン講師  坂尻 くにえ
+                ピアノ・エレクトーン講師  <span class="font-weight-bold">坂尻 くにえ</span>
               </p>
             </div>
+          </v-col>
+          <v-col cols="0" sm="2" md="1" class="d-none d-sm-block">
+            <img src="/greeting-right.png" alt="" style="width: 100%; max-width: 70px">
           </v-col>
         </v-row>
       </section>
