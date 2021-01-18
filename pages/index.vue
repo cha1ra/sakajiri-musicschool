@@ -1951,6 +1951,174 @@ export default {
               place: 'カフェ・パタータ'
             }
           ]
+        },
+        {
+          year: 2017,
+          color: 'primary',
+          contents: [
+            {
+              date: {
+                month: 3,
+                day: 5
+              },
+              text: 'Gift  坂尻くにえ　ピアノリサイタル',
+              place: 'アミュゼ柏クリスタルホール'
+            },
+            {
+              date: {
+                month: 6,
+                day: 4
+              },
+              text: 'MIST コンサート',
+              place: 'カフェパタータ'
+            },
+            {
+              date: {
+                month: 8,
+                day: 27
+              },
+              text: 'Kiss…at Summer ピアノ,チェロ,ホルンコンサート',
+              place: 'オハナホール'
+            },
+            {
+              date: {
+                month: 12,
+                day: 17
+              },
+              text: 'Christmas Concert &Party',
+              place: 'カフェ・パタータ'
+            }
+          ]
+        },
+        {
+          year: 2018,
+          color: 'primary',
+          contents: [
+            {
+              date: {
+                month: 4,
+                day: 15
+              },
+              text: 'Gift.35th Anniversary 坂尻くにえ リサイタル',
+              place: 'アミュゼ柏クリスタルホール'
+            },
+            {
+              date: {
+                month: 8,
+                day: 19
+              },
+              text: '若松ピアノ教室発表会 ゲスト出演',
+              place: '大田文化の森ホール'
+            },
+            {
+              date: {
+                month: 8,
+                day: 26
+              },
+              text: '第30回　JOYFUL CONCERT',
+              place: 'さわやかちば県民プラザホール'
+            },
+            {
+              date: {
+                month: 12,
+                day: 16
+              },
+              text: 'Christmas  Concert &Party',
+              place: 'カフェ・パタータ'
+            }
+          ]
+        },
+        {
+          year: 2019,
+          color: 'primary',
+          contents: [
+            {
+              date: {
+                month: 4,
+                day: 7
+              },
+              text: '「彩」Hail Music Knot ピアノ,ホルン,声楽コンサート',
+              place: 'カフェ・パタータ'
+            },
+            {
+              date: {
+                month: 7,
+                day: 28
+              },
+              text: '「ピアノと語りと歌と！」コンサート',
+              place: 'カフェ&バル　類'
+            },
+            {
+              date: {
+                month: 10,
+                day: 6
+              },
+              text: 'グレード合格おめでとうコンサート',
+              place: 'ヤマハ銀座店コンサートサロン'
+            },
+            {
+              date: {
+                month: 10,
+                day: 22
+              },
+              text: 'Gift 坂尻くにえリサイタル',
+              place: 'アミュゼ柏クリスタルホール'
+            },
+            {
+              date: {
+                month: 12,
+                day: 15
+              },
+              text: 'Christmas Concert &Party',
+              place: 'カフェ・パタータ'
+            }
+          ]
+        },
+        {
+          year: 2020,
+          color: 'primary',
+          contents: [
+            {
+              date: {
+                month: 5,
+                day: 9
+              },
+              text: '第31回JOYFUL CONCERT',
+              place: '録画発表会'
+            },
+            {
+              date: {
+                month: 9,
+                day: 6
+              },
+              text: '1部 Gift. 坂尻くにえ birthday concert',
+              place: 'アミュゼ柏'
+            },
+            {
+              date: {
+                month: 9,
+                day: 6
+              },
+              text: '2部「懐かしい映画音楽」nostalgic movie sound track',
+              place: 'アミュゼ柏'
+            },
+            {
+              date: {
+                month: 10,
+                day: 11
+              },
+              text: 'グレード合格おめでとうコンサート',
+              place: 'ヤマハ銀座店コンサートサロン'
+            },
+            {
+              date: {
+                month: 12,
+                day: 16
+              },
+              text: 'Christmas Ensemble Concert',
+              place: 'アミュゼ柏'
+            }
+          ]
         }
       ],
       rules: {

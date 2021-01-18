@@ -90,7 +90,7 @@ export default {
       default () {
         return [
           'gallary-1.png',
-          'gallary-2.png',
+          'gallary-2.jpg',
           'gallary-3.jpg',
           'gallary-4.jpg',
           'gallary-5.jpg',
